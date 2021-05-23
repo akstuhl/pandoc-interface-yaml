@@ -1,9 +1,15 @@
 {
-  "name": "pandoc-convert",
+  "name": "pandoc-convert-plus",
   "main": "./lib/init",
+<<<<<<< HEAD
   "version": "1.1.1",
   "description": "Convert files from one markup format into another using pandoc.",
   "repository": "https://github.com/akstuhl/atom-pandoc-convert-with-args",
+=======
+  "version": "0.3.0",
+  "description": "Convert files from one markup format into another using pandoc, with the possibility of using arguments.",
+  "repository": "https://github.com/Klemet/atom-pandoc-convert-plus",
+>>>>>>> 55c035257f63ba45cec716189b3c84b7c1b42448
   "license": "MIT",
   "engines": {
     "atom": ">1.30.0"
