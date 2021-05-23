@@ -1,7 +1,7 @@
 {
   "name": "pandoc-interface-yaml",
   "main": "./lib/init",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Export markdown or other files via Pandoc using YAML front-matter",
   "repository": "https://github.com/akstuhl/pandoc-interface-yaml",
   "license": "MIT",
