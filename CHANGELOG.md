@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.0.1
+## 0.1.0
 * Require user-installed `pandoc` binary
 * Use YAML front-matter for `pandoc` arguments
 * Report stdout + stderr in alerts
