@@ -1,6 +1,35 @@
-# `pandoc-convert-plus`
+# `pandoc-interface-yaml`
 
-[![Plugin installs!](https://img.shields.io/apm/dm/pandoc-convert-plus)](https://atom.io/packages/pandoc-convert-plus)
+Quickly export markdown or other documents in Atom to any format supported by [Pandoc](https://pandoc.org/), using a user-installed binary and passing arguments through YAML front-matter. `pandoc-interface-yaml` is derived from `pandoc-convert-plus`. The main differences in this package are:
+
+- File export options (path, format, other arguments) are set in-file with YAML front-matter instead of via prompts and package settings.
+- User must install `pandoc` separately (performance concerns). See the upstream repository for a bundled install option.
+
+See the [Pandoc site](https://pandoc.org/installing.html) for installation methods. Update this package's settings with the path to your `pandoc` binary (run `which pandoc` on Mac/Linux) if it differs from the default.
+
+Add any of these optional keys to a document's front-matter prior to running `Pandoc Interface > Export`:
+
+- `export-path` – Set the absolute or relative path for the generated document, including filename and extension. Defaults to the source document's name and directory.
+- `export-format` – See lib/targets.js for supported format names. Pandoc will infer format from path; a default format set in the package settings will be used if neither is specified.
+- `export-options` – Add other command line options for `pandoc`, e.g. `--filter=pandoc-citeproc`.
+
+Example:
+```
+---
+export-path: 'blog-post.html'
+export-format: 'html5'
+export-options: '--filter=pandoc-citeproc'
+title: 'A Well-Evidenced Screed'
+bibliography: library.bib
+csl: chicago-note-bibliography-with-ibid.csl
+---
+
+As has been well established...
+```
+
+The rest of this readme is from `pandoc-convert-plus`:
+
+---
 
 ## A plugin for the [Atom](https://atom.io/) text editor to unleash the full power of [Pandoc](https://pandoc.org/), and quickly convert your documents in style
 
@@ -13,12 +42,6 @@ The original `pandoc-convert` plugin allowed a user to quickly use pandoc to con
 However, `pandoc-convert` had one limitation : it didn't allow users to use a set of arguments with the pandoc command that the plugin executed.
 
 With pandoc-convert-plus, **you can now use any arguments that you want with pandoc**. This allows you to customize how pandoc will convert your document.
-
-## Where do I specify the additional arguments ?
-
-Simply go into the settings of Atom, and then the settings of the package. You'll find a text field to add your arguments.
-
-![](./images/settings.jpg)
 
 ## Is there a particular syntax for the arguments ?
 

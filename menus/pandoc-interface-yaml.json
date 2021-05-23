@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Export via Pandoc",
+        "command": "pandoc-interface-yaml:export"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "Pandoc Interface",
+          "submenu": [
+            {
+              "label": "Export",
+              "command": "pandoc-interface-yaml:export"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
