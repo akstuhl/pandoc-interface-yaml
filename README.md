@@ -7,13 +7,13 @@ Quickly export markdown or other documents in Atom to any format supported by [P
 
 See the [Pandoc site](https://pandoc.org/installing.html) for installation methods. Update this package's settings with the path to your `pandoc` binary (on Mac/Linux, run `which pandoc`) if it differs from the default.
 
-Add any of these optional keys to a document's front-matter prior to running `Pandoc Interface > Export`:
+Add any of these optional keys to a document's front-matter prior to running `Pandoc Interface > Export` (available in the contextual menu, Packages menu, or command palette):
 
 - `export-path` – Set the absolute or relative path for the generated document, including filename and extension. Defaults to the source document's name and directory.
 - `export-format` – See lib/targets.js for supported format names. Pandoc will infer format from path; a default format set in the package settings will be used if neither is specified.
 - `export-options` – Add other command line options for `pandoc`, e.g. `--filter=pandoc-citeproc`.
 
-Example:
+For example, the start of file `blog-post.md` might look like:
 ```
 ---
 export-path: 'blog-post.html'

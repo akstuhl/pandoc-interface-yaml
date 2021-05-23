@@ -1,10 +1,11 @@
 # Changelog
 
-## 1.3.1
+## 0.0.1
 * Require user-installed `pandoc` binary
 * Use YAML front-matter for `pandoc` arguments
 * Report stdout + stderr in alerts
-* Reveal a generated file in Finder/Explorer 
+* Reveal a generated file in Finder/Explorer
+* Add contextual and application menu items
 
 ---
 
