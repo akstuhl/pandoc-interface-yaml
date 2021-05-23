@@ -3,14 +3,10 @@
   "main": "./lib/init",
   "version": "1.1.1",
   "description": "Convert files from one markup format into another using pandoc.",
-  "repository": "https://github.com/josa42/atom-pandoc-convert",
+  "repository": "https://github.com/akstuhl/atom-pandoc-convert-with-args",
   "license": "MIT",
   "engines": {
     "atom": ">1.30.0"
-  },
-  "dependencies": {
-    "pandoc-bin": "^0.2.0",
-    "atom-quick-input": "^0.1.1"
   },
   "devDependencies": {
     "eslint": "^5.6.1",
@@ -22,5 +18,8 @@
   },
   "scripts": {
     "lint": "eslint ."
+  },
+  "dependencies": {
+    "frontmatter": "0.0.3"
   }
 }
