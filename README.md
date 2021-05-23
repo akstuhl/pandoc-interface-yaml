@@ -5,7 +5,7 @@ Quickly export markdown or other documents in Atom to any format supported by [P
 - File export options (path, format, other arguments) are set in-file with YAML front-matter instead of via prompts and package settings.
 - User must install `pandoc` separately (performance concerns). See the upstream repository for a bundled install option.
 
-See the [Pandoc site](https://pandoc.org/installing.html) for installation methods. Update this package's settings with the path to your `pandoc` binary (run `which pandoc` on Mac/Linux) if it differs from the default.
+See the [Pandoc site](https://pandoc.org/installing.html) for installation methods. Update this package's settings with the path to your `pandoc` binary (on Mac/Linux, run `which pandoc`) if it differs from the default.
 
 Add any of these optional keys to a document's front-matter prior to running `Pandoc Interface > Export`:
 
@@ -35,9 +35,7 @@ The rest of this readme is from `pandoc-convert-plus`:
 
 `pandoc-convert-plus` is a fork of the `pandoc-convert` plugin for Atom that gives more flexibility to the user, by allowing them to invoke pandoc with additional arguments.
 
-The original `pandoc-convert` plugin allowed a user to quickly use pandoc to convert their documents to many different formats with the `Ctrl + P` command in atom, as shown here :
-
-![](./images/menu_capture.JPG)
+The original `pandoc-convert` plugin allowed a user to quickly use pandoc to convert their documents to many different formats with the `Ctrl + P` command in atom.
 
 However, `pandoc-convert` had one limitation : it didn't allow users to use a set of arguments with the pandoc command that the plugin executed.
 
