@@ -1,9 +1,9 @@
 # `pandoc-interface-yaml`
 
-Quickly export markdown or other documents in Atom to any format supported by [Pandoc](https://pandoc.org/), using a user-installed binary and passing arguments through YAML front-matter. `pandoc-interface-yaml` is derived from `pandoc-convert-plus`. The main differences in this package are:
+Quickly export markdown or other documents in Atom to any format supported by [Pandoc](https://pandoc.org/), using a user-installed binary and passing arguments through YAML front-matter. `pandoc-interface-yaml` is derived from [`pandoc-convert-plus`](https://github.com/Klemet/atom-pandoc-convert-plus). The main differences in this package are:
 
 - File export options (path, format, other arguments) are set in-file with YAML front-matter instead of via prompts and package settings.
-- User must install `pandoc` separately (performance concerns). See the upstream repository for a bundled install option.
+- User must install `pandoc` separately (performance concerns). See the [upstream repository](https://github.com/Klemet/atom-pandoc-convert-plus) for a bundled install option.
 
 See the [Pandoc site](https://pandoc.org/installing.html) for installation methods. Update this package's settings with the path to your `pandoc` binary (on Mac/Linux, run `which pandoc`) if it differs from the default.
 
@@ -13,7 +13,7 @@ Add any of these optional keys to a document's front-matter prior to running `Pa
 - `export-format` – See lib/targets.js for supported format names. Pandoc will infer format from path; a default format set in the package settings will be used if neither is specified.
 - `export-options` – Add other command line options for `pandoc`, e.g. `--filter=pandoc-citeproc`.
 
-For example, the start of file `blog-post.md` might look like:
+For example, the start of file `draft.md` might look like:
 ```
 ---
 export-path: 'blog-post.html'

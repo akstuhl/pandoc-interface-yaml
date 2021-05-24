@@ -1,8 +1,17 @@
 {
   "name": "pandoc-interface-yaml",
   "main": "./lib/init",
-  "version": "0.1.0",
+  "version": "1.4.0",
   "description": "Export markdown or other files via Pandoc using YAML front-matter",
+  "keywords": [
+    "pandoc",
+    "markdown",
+    "export",
+    "convert",
+    "document",
+    "pdf",
+    "docx"
+  ],
   "repository": "https://github.com/akstuhl/pandoc-interface-yaml",
   "license": "MIT",
   "engines": {
@@ -21,5 +30,12 @@
   },
   "dependencies": {
     "frontmatter": "0.0.3"
+  },
+  "consumedServices": {
+    "busy-signal": {
+      "versions": {
+        "1.0.0": "consumeSignal"
+      }
+    }
   }
 }
