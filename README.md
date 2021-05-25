@@ -1,13 +1,24 @@
-# `pandoc-interface-yaml`
+# A file converter with in-document settings
 
-Quickly export markdown or other documents in Atom to any format supported by [Pandoc](https://pandoc.org/), using a user-installed binary and passing arguments through YAML front-matter. `pandoc-interface-yaml` is derived from [`pandoc-convert-plus`](https://github.com/Klemet/atom-pandoc-convert-plus). The main differences in this package are:
+Quickly export markdown or other text files in Atom to Word, PDF, or any other format supported by [Pandoc](https://pandoc.org/). `pandoc-interface-yaml` is derived from [`pandoc-convert-plus`](https://github.com/Klemet/atom-pandoc-convert-plus). The main differences in this package are:
 
-- File export options (path, format, other arguments) are set in-file with YAML front-matter instead of via prompts and package settings.
-- User must install `pandoc` separately (performance concerns). See the [upstream repository](https://github.com/Klemet/atom-pandoc-convert-plus) for a bundled install option.
+- File export options (path, format, and other arguments) are set in-file with YAML front-matter instead of using prompts and package settings.
+- Users must install `pandoc` separately due to performance concerns. See the [upstream repository](https://github.com/Klemet/atom-pandoc-convert-plus) for a bundled install option.
 
-See the [Pandoc site](https://pandoc.org/installing.html) for installation methods. Update this package's settings with the path to your `pandoc` binary (on Mac/Linux, run `which pandoc`) if it differs from the default.
+## Installation
 
-Add any of these optional keys to a document's front-matter prior to running `Pandoc Interface > Export` (available in the contextual menu, Packages menu, or command palette):
+On Mac:
+
+```
+> brew install pandoc
+> apm install pandoc-interface-yaml
+```
+
+See the [Pandoc site](https://pandoc.org/installing.html) for other installation methods.
+
+## Usage
+
+Add any of these optional keys to a document's front-matter prior to running `Pandoc Interface > Export` (available in the right-click contextual menu, Packages menu, or command palette):
 
 - `export-path` – Set the absolute or relative path for the generated document, including filename and extension. Defaults to the source document's name and directory.
 - `export-format` – See lib/targets.js for supported format names. Pandoc will infer format from path; a default format set in the package settings will be used if neither is specified.
@@ -26,6 +37,11 @@ csl: chicago-note-bibliography-with-ibid.csl
 
 As has been well established...
 ```
+
+## Package settings
+
+- You can specify the path to the Pandoc binary you want to use. (If the field is left blank, the command line `pandoc` will be called.)
+- Set the default file format to export when neither `export-path` nor `export-format` are defined in a document.
 
 The rest of this readme is from `pandoc-convert-plus`:
 

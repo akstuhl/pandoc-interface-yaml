@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.4.2
+* Default to calling `pandoc` without its full path 
+
 ## 1.4.1
 * Integrate `busy-signal` function
 
