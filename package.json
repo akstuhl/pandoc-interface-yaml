@@ -1,7 +1,7 @@
 {
   "name": "pandoc-interface-yaml",
   "main": "./lib/init",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Export markdown or other files via Pandoc using YAML front-matter",
   "keywords": [
     "pandoc",
